@@ -3,6 +3,8 @@
   --primary-white: coral;
   --primary-orange: #f9ab00;
   --primary-dark: rgba(255, 255, 255, 0);
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
 }
 
 body {
@@ -45,6 +47,67 @@ nav ul li {
   border-top: 0.1875rem solid var(--primary-orange);
 }
 
-.navbar-nav > li > a:hover{
+.navbar-nav > li > a:hover {
   border-top: 0.1875rem solid var(--primary-orange);
+}
+
+/* *****************************************HEADER */
+.header-wraper {
+  position: relative;
+  background: url(bg.png) no-repeat;
+  width: 100%;
+  height: inherit;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+.main-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.main-info {
+  color: var(--primary-orange);
+  text-transform: uppercase;
+}
+/* ********************************************Typed text */
+.typed-text {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* ********************************************Main offer button */
+
+.btn-min-offer {
+  border: 1px solid var(--primary-red);
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: white;
+  margin-top: 2rem;
+  text-decoration: none;
+}
+.btn-min-offer:hover {
+  text-decoration: none;
+  background-color: var(--primary-hover-red);
+  color: wheat;
+  transition: .2s ease-in-out;
+}
+
+@media(max-width: 768px){
+  .main-info h1{
+   font-size: 1.7rem !important;
+  }
+  .typed-text{
+    font-size: 1.3rem !important;
+  }
 }
